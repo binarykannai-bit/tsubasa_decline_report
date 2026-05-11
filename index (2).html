@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>「副業ハンターの神谷さん」LINE登録が4ヶ月で65%減った理由｜分析レポート 2026.05.11</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Noto+Sans+JP:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #fafaf7;
+  --bg-warm: #f3efe6;
+  --bg-card: #ffffff;
+  --ink: #1a1a1a;
+  --ink-mid: #4a4a4a;
+  --ink-soft: #7a7a7a;
+  --ink-faint: #b8b3a8;
+  --line: #e6e1d4;
+  --line-strong: #c8c1b0;
+  --accent: #c43d2a;
+  --accent-dark: #8a2a1c;
+  --good: #2d7a4f;
+  --warn: #c97f0c;
+  --bg-good: #eaf5ee;
+  --bg-bad: #fdeae6;
+  --bg-warn: #fdf3e0;
+  --highlight: #fff3a8;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  line-height: 1.95;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+.mincho { font-family: 'Shippori Mincho', serif; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+
+/* Container */
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.wrap-wide {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* === HERO === */
+.hero {
+  padding: 80px 0 60px;
+  background: linear-gradient(180deg, var(--bg-warm) 0%, var(--bg) 100%);
+  border-bottom: 1px solid var(--line);
+}
+.hero-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  color: var(--accent);
+  margin-bottom: 24px;
+}
+h1 {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 800;
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  margin-bottom: 28px;
+  color: var(--ink);
+}
+h1 .marker {
+  background: linear-gradient(transparent 65%, var(--highlight) 65%);
+  padding: 0 4px;
+}
+.hero-lead {
+  font-size: 19px;
+  line-height: 1.95;
+  color: var(--ink-mid);
+  margin-bottom: 40px;
+}
+.hero-tldr {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  padding: 28px 32px;
+  margin-top: 32px;
+}
+.hero-tldr h3 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.hero-tldr ol {
+  list-style: none;
+  counter-reset: tldr;
+}
+.hero-tldr li {
+  counter-increment: tldr;
+  padding: 10px 0 10px 40px;
+  position: relative;
+  font-size: 15px;
+}
+.hero-tldr li::before {
+  content: counter(tldr);
+  position: absolute;
+  left: 0;
+  top: 12px;
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--accent);
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* === Chapter === */
+section.chapter {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--line);
+}
+.chapter-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+}
+.chapter-num strong { color: var(--accent); font-weight: 700; }
+h2 {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 800;
+  font-size: clamp(26px, 3.5vw, 36px);
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  margin-bottom: 32px;
+  color: var(--ink);
+}
+h2 .em { color: var(--accent); }
+h3.sub {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 40px 0 16px;
+  padding-left: 16px;
+  border-left: 3px solid var(--accent);
+}
+p { margin-bottom: 20px; }
+p strong { font-weight: 700; }
+.lead { font-size: 17px; line-height: 2; }
+.highlight-text { background: var(--highlight); padding: 0 4px; }
+
+/* Glossary tooltip */
+.term {
+  border-bottom: 1px dotted var(--ink-soft);
+  cursor: help;
+  position: relative;
+}
+.term:hover { color: var(--accent); }
+
+/* === Premise box === */
+.premise {
+  background: var(--bg-warm);
+  border: 1px solid var(--line);
+  padding: 32px;
+  margin: 32px 0;
+  border-radius: 4px;
+}
+.premise h4 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.flow-arrow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 700;
+  font-size: 15px;
+}
+.flow-step {
+  background: var(--bg-card);
+  border: 1px solid var(--line-strong);
+  padding: 10px 16px;
+  border-radius: 4px;
+}
+.flow-step.critical {
+  background: var(--bg-bad);
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+.flow-arrow svg { color: var(--accent); flex-shrink: 0; }
+
+/* === Big number === */
+.big-stat {
+  text-align: center;
+  padding: 48px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin: 40px 0;
+}
+.big-stat .num {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 800;
+  font-size: clamp(72px, 12vw, 120px);
+  line-height: 1;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+}
+.big-stat .label {
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin-top: 16px;
+}
+.big-stat .sublabel {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--ink-faint);
+  margin-top: 12px;
+}
+
+/* === Comparison row (with explanation) === */
+.compare-row {
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  gap: 16px;
+  margin: 24px 0;
+  align-items: stretch;
+}
+.compare-side {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  padding: 24px;
+}
+.compare-side.was { border-top: 3px solid var(--good); }
+.compare-side.now { border-top: 3px solid var(--accent); }
+.compare-side .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  margin-bottom: 12px;
+}
+.compare-side.was .label { color: var(--good); }
+.compare-side.now .label { color: var(--accent); }
+.compare-side .stat {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.compare-side.was .stat { color: var(--good); }
+.compare-side.now .stat { color: var(--accent); }
+.compare-side .desc {
+  font-size: 13px;
+  color: var(--ink-mid);
+  line-height: 1.7;
+}
+.compare-vs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+/* === Bar chart === */
+.bar-chart {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  padding: 32px;
+  margin: 32px 0;
+}
+.bar-chart h4 {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+.bar-chart .chart-sub {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-bottom: 24px;
+}
+.bar-item {
+  display: grid;
+  grid-template-columns: 100px 1fr 90px;
+  gap: 16px;
+  align-items: center;
+  padding: 8px 0;
+}
+.bar-item .bar-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--ink-mid);
+}
+.bar-item .bar-label.peak { color: var(--good); font-weight: 700; }
+.bar-item .bar-track {
+  background: var(--bg-warm);
+  height: 28px;
+  position: relative;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.bar-item .bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 12px;
+  color: white;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.bar-item .bar-fill.peak {
+  background: linear-gradient(90deg, var(--good) 0%, #1f5a3a 100%);
+}
+.bar-item .bar-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--ink-mid);
+  text-align: right;
+  font-weight: 700;
+}
+
+/* === Title example box === */
+.title-example {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  padding: 24px 28px;
+  margin: 20px 0;
+  border-left: 4px solid var(--line-strong);
+}
+.title-example.good { border-left-color: var(--good); background: var(--bg-good); }
+.title-example.bad { border-left-color: var(--accent); background: var(--bg-bad); }
+.title-example .tex-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  margin-bottom: 12px;
+}
+.title-example.good .tex-label { color: var(--good); }
+.title-example.bad .tex-label { color: var(--accent); }
+.title-example .tex-title {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.title-example .tex-stats {
+  display: flex;
+  gap: 24px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-bottom: 12px;
+}
+.title-example .tex-stats strong { color: var(--ink); }
+.title-example .tex-comment {
+  font-size: 14px;
+  color: var(--ink-mid);
+  line-height: 1.8;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line-strong);
+}
+
+/* === Psychology callout === */
+.psy {
+  background: linear-gradient(135deg, var(--bg-warm) 0%, var(--bg) 100%);
+  border: 1px solid var(--line);
+  padding: 32px;
+  margin: 32px 0;
+  position: relative;
+}
+.psy::before {
+  content: '👤';
+  position: absolute;
+  top: -16px;
+  left: 24px;
+  background: var(--accent);
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+.psy h4 {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 16px;
+  padding-top: 8px;
+}
+.psy .quote {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--accent-dark);
+  margin: 12px 0;
+  padding-left: 16px;
+  border-left: 3px solid var(--accent);
+}
+
+/* === Action card === */
+.action-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--accent);
+  padding: 32px;
+  margin: 24px 0;
+}
+.action-priority {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  background: var(--accent);
+  color: white;
+  padding: 6px 12px;
+  margin-bottom: 16px;
+}
+.action-priority.p1 { background: var(--warn); }
+.action-priority.p2 { background: var(--ink-soft); }
+.action-card h3 {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+.action-card .why {
+  background: var(--bg-warm);
+  padding: 16px 20px;
+  margin: 20px 0;
+  font-size: 14px;
+  line-height: 1.85;
+  border-left: 3px solid var(--warn);
+}
+.action-card .why strong { color: var(--accent-dark); }
+.action-card .impact {
+  background: var(--bg-good);
+  padding: 16px 20px;
+  margin-top: 20px;
+  font-size: 14px;
+  border-left: 3px solid var(--good);
+}
+.action-card .impact strong { color: var(--good); }
+.rewrite-block {
+  margin: 16px 0;
+}
+.rewrite-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin: 12px 0;
+}
+.rewrite-before, .rewrite-after {
+  padding: 10px 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: 'Shippori Mincho', serif;
+}
+.rewrite-before {
+  background: var(--bg-bad);
+  border-left: 3px solid var(--accent);
+  color: var(--ink-mid);
+  text-decoration: line-through;
+  text-decoration-color: var(--accent);
+}
+.rewrite-after {
+  background: var(--bg-good);
+  border-left: 3px solid var(--good);
+  color: var(--ink);
+  font-weight: 700;
+}
+.rewrite-after::before {
+  content: '→ ';
+  color: var(--good);
+  font-weight: 800;
+}
+
+/* === Glossary === */
+.glossary {
+  background: var(--bg-warm);
+  padding: 32px;
+  margin-top: 40px;
+  border-radius: 4px;
+}
+.glossary h4 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+.glossary dl { display: grid; grid-template-columns: 1fr; gap: 16px; }
+.glossary dt {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.glossary dd {
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--ink-mid);
+}
+
+/* Footer */
+footer {
+  padding: 60px 0;
+  background: var(--bg-warm);
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+footer .src {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  margin-top: 16px;
+  color: var(--ink-faint);
+}
+
+@media (max-width: 700px) {
+  .compare-row { grid-template-columns: 1fr; }
+  .compare-vs { padding: 8px 0; }
+  .bar-item { grid-template-columns: 80px 1fr 70px; gap: 8px; }
+  .bar-item .bar-label { font-size: 11px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-tag">分析レポート ｜ 2026.05.11</div>
+    <h1>「副業ハンターの神谷さん」<br>LINE登録が4ヶ月で<span class="marker">65%減った</span>。<br>その理由がはっきり見えました。</h1>
+    <p class="hero-lead">
+      このレポートは、YouTubeチャンネル「副業ハンターの神谷さん」（演者：神谷翼）で2026年1月から起きているLINE登録の減少について、データから原因を特定し、改善策を提案するものです。<br><br>
+      「感覚的にLINE登録が減っている気がする」という相談から始まり、Windsor.ai と Supabase のデータを照合した結果、<strong>感覚以上に深刻な構造的問題</strong>が見えてきました。
+    </p>
+
+    <div class="hero-tldr">
+      <h3>このレポートで分かる4つのこと</h3>
+      <ol>
+        <li>LINE登録は4ヶ月で65%減少。これは「感覚」ではなく数字で確認できる事実です。</li>
+        <li>「再生数は変わっていない」という認識は半分正しく、半分間違っています。実は再生数も大きく落ちています。</li>
+        <li>原因は「タイトルの作り方が変わったこと」と「同じテーマを繰り返したこと」の2つに絞れます。</li>
+        <li>修正方法は具体的に3つあり、最優先で1つやるだけで状況は動き始めます。</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CHAPTER 1: 前提共有 ============ -->
+<section class="chapter">
+  <div class="wrap">
+    <div class="chapter-num">CHAPTER <strong>01</strong> ／ そもそも、なぜLINE登録が大事なのか</div>
+    <h2>このチャンネルの売上は、<br>すべて「LINE登録」を通る。</h2>
+
+    <p class="lead">
+      話を始める前に、このチャンネルの収益構造を確認します。なぜなら<strong>「LINE登録の減少」が「売上の減少」に直結する</strong>からです。
+    </p>
+
+    <div class="premise">
+      <h4>収益が生まれるまでの流れ</h4>
+      <div class="flow-arrow">
+        <span class="flow-step">YouTube動画</span>
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M0 5h14M10 1l5 4-5 4" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span class="flow-step critical">LINE登録</span>
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M0 5h14M10 1l5 4-5 4" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span class="flow-step">ステップ配信（5日間）</span>
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M0 5h14M10 1l5 4-5 4" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span class="flow-step">無料個別通話</span>
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M0 5h14M10 1l5 4-5 4" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span class="flow-step">スクール購入</span>
+      </div>
+      <p style="margin-top:16px; font-size:14px; color:var(--ink-mid); margin-bottom:0;">
+        LINE登録は「動画を見た人 → 商品を買う見込み客になる人」への変換点です。<strong>LINE登録が減る = その後の通話も購入も連動して減る</strong>。だから「LINE登録の減少」は、視聴回数や登録者数の変動より深刻に扱う必要があります。
+      </p>
+    </div>
+
+    <p>
+      もう1つ、このレポート全体で繰り返し登場する「<strong>ターゲット視聴者</strong>」を最初に共有しておきます。チャンネルが想定している主な視聴者像は次のような人物です。
+    </p>
+
+    <div class="psy">
+      <h4>このチャンネルが届けたい人物：カトウタカシ（仮名）</h4>
+      <p style="margin:0; font-size:14px; color:var(--ink-mid);">
+        35歳の会社員（製造業）。妻と3歳の娘がいて、年収300万円。「副業をやりたい」と思っているけど、情報がありすぎて何から始めればいいかわからず動けない。根拠が明確で・段階が見えて・自分にもできそうだと納得できた時だけ、ようやく行動できるタイプ。
+      </p>
+      <div class="quote">「具体的に何をすればいいかが見える動画」だけが、彼を動かす。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 2: 起きていること ============ -->
+<section class="chapter">
+  <div class="wrap">
+    <div class="chapter-num">CHAPTER <strong>02</strong> ／ 数字で確認する</div>
+    <h2>では、実際に何が<br>起きているのでしょうか。</h2>
+
+    <p class="lead">
+      まずLINE登録数を月別に並べました。これは Supabase に蓄積されている毎日の登録データを集計したものです。
+    </p>
+
+    <div class="bar-chart">
+      <h4>毎月のLINE登録（1日あたりの平均数）</h4>
+      <p class="chart-sub">2026年1月を100%として、毎月の日次平均がどう変化したか</p>
+      <div class="bar-item">
+        <span class="bar-label peak">2026年 1月</span>
+        <div class="bar-track"><div class="bar-fill peak" style="width:100%">90.7 件/日</div></div>
+        <span class="bar-value">100%</span>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">2月</span>
+        <div class="bar-track"><div class="bar-fill" style="width:72%">65.4 件/日</div></div>
+        <span class="bar-value">72%</span>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">3月</span>
+        <div class="bar-track"><div class="bar-fill" style="width:57%">51.3 件/日</div></div>
+        <span class="bar-value">57%</span>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">4月</span>
+        <div class="bar-track"><div class="bar-fill" style="width:37%">33.2 件/日</div></div>
+        <span class="bar-value">37%</span>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">5月（途中）</span>
+        <div class="bar-track"><div class="bar-fill" style="width:27%">24.6 件/日</div></div>
+        <span class="bar-value">27%</span>
+      </div>
+    </div>
+
+    <p>
+      ピークだった1月は1日90人がLINE登録していました。4月は33人。5月はさらに落ちて24人。<strong>毎日入ってくるはずだった60人以上が、入ってこなくなった</strong>ということです。
+    </p>
+
+    <div class="big-stat">
+      <div class="num">-65%</div>
+      <div class="label">月合計のLINE登録（1月 → 4月）</div>
+      <div class="sublabel">2,813件（1月）→ 995件（4月）</div>
+    </div>
+
+    <p>
+      ここで重要なポイントを確認します。このレポートは「<span class="highlight-text">なぜこれが起きたのか</span>」と「<span class="highlight-text">どうすれば戻せるのか</span>」を明らかにすることが目的です。次の章から原因を1つずつ検証していきます。
+    </p>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 3: 仮説検証 ============ -->
+<section class="chapter">
+  <div class="wrap">
+    <div class="chapter-num">CHAPTER <strong>03</strong> ／ 最初の仮説を検証する</div>
+    <h2>「再生数は変わっていないのに、<br>LINE登録だけ減った」は本当か？</h2>
+
+    <p class="lead">
+      神谷さん本人からの最初の声は「<strong>動画の再生数はそこまで変わっていないのに、LINE登録だけ激減している気がする</strong>」というものでした。これが本当ならば、原因はLINE誘導の仕組み（CTA・概要欄・ステップ配信）に絞り込めることになります。<br><br>
+      しかし、Windsor.ai の YouTube データで確認したところ、<strong>再生数も同じように落ちていました</strong>。
+    </p>
+
+    <div class="bar-chart">
+      <h4>その月に公開した動画の総再生数（メインチャンネル）</h4>
+      <p class="chart-sub">「2026年1月に公開した動画たちが、合計で何回再生されたか」を月ごとに比較</p>
+      <div class="bar-item">
+        <span class="bar-label peak">2026年 1月</span>
+        <div class="bar-track"><div class="bar-fill peak" style="width:100%">187,825 回</div></div>
+        <span class="bar-value">100%</span>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">2月</span>
+        <div class="bar-track"><div class="bar-fill" style="width:26%">48,885 回</div></div>
+        <span class="bar-value">26%</span>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">3月</span>
+        <div class="bar-track"><div class="bar-fill" style="width:26%">48,538 回</div></div>
+        <span class="bar-value">26%</span>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">4月</span>
+        <div class="bar-track"><div class="bar-fill" style="width:18%">34,372 回</div></div>
+        <span class="bar-value">18%</span>
+      </div>
+    </div>
+
+    <p>
+      1月に公開した動画たちの合計再生数は約19万回。4月公開分は約3.4万回。<strong>新作動画の再生数は82%減少</strong>しています。LINE登録の-65%より、実は再生数のほうが大きく落ちているのです。
+    </p>
+
+    <p>
+      ではなぜ「再生数は変わっていない」と感じたのか。それは、YouTubeのダッシュボードに表示される「チャンネル全体の総再生数」を見ていたからだと思われます。これは過去の動画も全部足した数なので、新作の不調は見えにくいのです。
+    </p>
+
+    <h3 class="sub">結論：再生数とLINE登録は、両方落ちている</h3>
+    <p>
+      つまり、問題は「LINE誘導の仕組み」ではなく、もっと手前の「<strong>動画そのもの</strong>」にある可能性が高い、ということです。次の章で動画の何が変わったかを見ていきます。
+    </p>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 4: ヒット動画が出ていない ============ -->
+<section class="chapter">
+  <div class="wrap">
+    <div class="chapter-num">CHAPTER <strong>04</strong> ／ 動画の中身を見る</div>
+    <h2>1月までは月に1-2本「ヒット動画」が出ていた。<br>2月以降、それが<span class="em">ゼロ</span>になった。</h2>
+
+    <p class="lead">
+      「動画がうまくいくかどうか」は本数だけでは測れません。実際には、たくさんの動画の中で<strong>「ヒットする数本」がチャンネル全体の数字を引き上げている</strong>のが普通です。1月までのデータがまさにそうでした。
+    </p>
+
+    <p>
+      過去のヒット動画TOP10を見てみます。再生数が1万回を超えた動画です。
+    </p>
+
+    <div class="bar-chart">
+      <h4>過去のヒット動画10本（再生数1万超え）</h4>
+      <p class="chart-sub">2025年10月から2026年1月に公開された動画のうち、特に伸びたもの</p>
+      <div class="bar-item">
+        <span class="bar-label peak">11/24</span>
+        <div class="bar-track"><div class="bar-fill peak" style="width:100%">96,466 回</div></div>
+        <span class="bar-value">楽天ROOM</span>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label peak">12/15</span>
+        <div class="bar-track"><div class="bar-fill peak" style="width:65%">63,186 回</div></div>
+        <span class="bar-value">LINEスタンプ</span>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label peak">1/07</span>
+        <div class="bar-track"><div class="bar-fill peak" style="width:34%">32,856 回</div></div>
+        <span class="bar-value">楽天ROOM</span>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">10/31</span>
+        <div class="bar-track"><div class="bar-fill" style="width:20%">19,215 回</div></div>
+        <span class="bar-value">Canva</span>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">12/11</span>
+        <div class="bar-track"><div class="bar-fill" style="width:20%">19,137 回</div></div>
+        <span class="bar-value">楽天ROOM</span>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">12/29</span>
+        <div class="bar-track"><div class="bar-fill" style="width:18%">16,941 回</div></div>
+        <span class="bar-value">Canva</span>
+      </div>
+    </div>
+
+    <p>
+      <strong>2月以降、再生数1万を超えた動画は1本もありません</strong>。これが問題の根っこの1つです。
+    </p>
+
+    <div class="compare-row">
+      <div class="compare-side was">
+        <div class="label">2025/10 - 2026/01</div>
+        <div class="stat">月1-2本</div>
+        <div class="desc">「再生1万超え＝ヒット動画」がコンスタントに出ていた時期。チャンネル全体のLINE登録の60%以上をこの数本が稼いでいた。</div>
+      </div>
+      <div class="compare-vs">→</div>
+      <div class="compare-side now">
+        <div class="label">2026/02 - 05</div>
+        <div class="stat">ゼロ</div>
+        <div class="desc">4ヶ月間、再生1万を超えた動画が1本も出ていない。最高でも8,332回（3月の楽天ROOM動画）。</div>
+      </div>
+    </div>
+
+    <p>
+      これだけでも-65%の半分以上を説明できますが、<strong>もう1つ、より深刻な問題が見えてきました</strong>。
+    </p>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 5: 転換率が落ちている ============ -->
+<section class="chapter">
+  <div class="wrap">
+    <div class="chapter-num">CHAPTER <strong>05</strong> ／ もっと深い問題</div>
+    <h2>同じ100回再生でも、LINE登録される数が<br>過去に比べて<span class="em">約3分の1</span>になっている。</h2>
+
+    <p class="lead">
+      ヒット動画が出ていないという話は「<strong>絶対値の問題</strong>」です。でも、もし同じ再生数でも昔と同じだけLINE登録が取れていれば、まだ救いがあります。実際はそうではありませんでした。
+    </p>
+
+    <p>
+      「<strong>動画を見た人のうち、何%がLINE登録したか</strong>」という割合を計算してみます。これを「LINE転換率」と呼びます。
+    </p>
+
+    <div class="compare-row">
+      <div class="compare-side was">
+        <div class="label">過去ヒット動画10本</div>
+        <div class="stat">1.35%</div>
+        <div class="desc">100人が再生した動画で、平均1.35人がLINE登録していた。<br>=1万再生なら135人</div>
+      </div>
+      <div class="compare-vs">→</div>
+      <div class="compare-side now">
+        <div class="label">直近7本（4-5月）</div>
+        <div class="stat">0.49%</div>
+        <div class="desc">100人が再生した動画で、0.49人しかLINE登録しない。<br>=1万再生でも49人</div>
+      </div>
+    </div>
+
+    <p>
+      つまり、<strong>仮に再生数が完全に回復しても、それだけではLINE登録は3分の1しか戻らない</strong>ということです。これは別の対処が必要な「構造的な問題」です。
+    </p>
+
+    <div class="big-stat">
+      <div class="num">1 / 2.7</div>
+      <div class="label">100人にLINE登録してもらえる効率が、約2.7倍悪化した</div>
+      <div class="sublabel">1.35% → 0.49% への低下</div>
+    </div>
+
+    <p>
+      ここで疑問が浮かびます。<strong>なぜ同じ視聴者でも、LINE登録するかどうかが変わったのか？</strong>　これに対する答えが、次の章のテーマです。
+    </p>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 6: タイトルの作り方が変わった ============ -->
+<section class="chapter">
+  <div class="wrap">
+    <div class="chapter-num">CHAPTER <strong>06</strong> ／ 何が変わったのか（原因①）</div>
+    <h2>原因①：タイトルの作り方が、<br>知らないうちに変わっていた。</h2>
+
+    <p class="lead">
+      ヒット動画と直近の動画のタイトルを並べて見比べると、ある明確な違いが見えてきます。実例で確認します。
+    </p>
+
+    <h3 class="sub">過去ヒット動画のタイトル例</h3>
+
+    <div class="title-example good">
+      <div class="tex-label">過去ヒット ｜ 2026.01.07</div>
+      <div class="tex-title">【2026年最新】楽天ROOMで月30万〜60万作る<u>唯一の正解ルート</u>！99％が知らないスマホでできる突破法を初心者向け解説！</div>
+      <div class="tex-stats">
+        <span>再生：<strong>32,856</strong></span>
+        <span>YT登録：<strong>995</strong></span>
+        <span>LINE登録：<strong>535</strong></span>
+        <span>LINE転換率：<strong>1.63%</strong></span>
+      </div>
+      <div class="tex-comment">「唯一の正解ルート」という言葉で「これさえ見れば全部わかる」という期待を作り出している。視聴者は「自分にも全行程が見える」と感じてLINE登録に進む。</div>
+    </div>
+
+    <div class="title-example good">
+      <div class="tex-label">過去ヒット ｜ 2025.12.15</div>
+      <div class="tex-title">【副業 → 月30万】実は99％が間違っているLINEスタンプ副業！<u>本業超えも可能な正しい収益化方法</u>を解説！</div>
+      <div class="tex-stats">
+        <span>再生：<strong>63,186</strong></span>
+        <span>YT登録：<strong>2,446</strong></span>
+        <span>LINE登録：<strong>856</strong></span>
+        <span>LINE転換率：<strong>1.35%</strong></span>
+      </div>
+      <div class="tex-comment">「間違っている」で問題を提起しつつ、「正しい収益化方法」で<strong>答えがあること</strong>もタイトル内で約束している。問題と答えがセットで提示されている。</div>
+    </div>
+
+    <h3 class="sub">直近の動画のタイトル例</h3>
+
+    <div class="title-example bad">
+      <div class="tex-label">直近 ｜ 2026.04.24</div>
+      <div class="tex-title">【副業 → 月70万】AI×塗り絵のこと舐めてる？初心者が99％ハマる<u>致命的な落とし穴</u></div>
+      <div class="tex-stats">
+        <span>再生：<strong>2,735</strong></span>
+        <span>YT登録：<strong>10</strong></span>
+        <span>LINE登録：<strong>6</strong></span>
+        <span>LINE転換率：<strong>0.22%</strong></span>
+      </div>
+      <div class="tex-comment">「落とし穴」だけが提示されていて、「<strong>じゃあ正解はなに？</strong>」が見えない。視聴者は「失敗を回避する方法」だけ知りたくて見るので、もっと深く学ぼうとは思わない。LINE登録の動機が生まれない。</div>
+    </div>
+
+    <div class="title-example bad">
+      <div class="tex-label">直近 ｜ 2026.04.14</div>
+      <div class="tex-title">【副業 → 500万】Canvaで出来る副業の最高地点！AI×塗り絵が<u>上手くいかない人は設計を理解すべき</u></div>
+      <div class="tex-stats">
+        <span>再生：<strong>2,742</strong></span>
+        <span>YT登録：<strong>15</strong></span>
+        <span>LINE登録：<strong>10</strong></span>
+        <span>LINE転換率：<strong>0.36%</strong></span>
+      </div>
+      <div class="tex-comment">「上手くいかない人は」という条件付きの言い方で、視聴者を選別してしまっている。「自分にも関係あるかも」という幅広さがない。</div>
+    </div>
+
+    <h3 class="sub">何が違うのか、整理します</h3>
+
+    <div class="compare-row">
+      <div class="compare-side was">
+        <div class="label">過去ヒット ｜ 結論完結型</div>
+        <div class="stat" style="font-size:22px; line-height:1.4;">「これさえ見れば<br>全部わかる」</div>
+        <div class="desc">完全版・唯一の正解ルート・本当の方法 など、<strong>答えが必ずある</strong>ことを約束する言葉が使われている。<br><br>視聴者は「自分にも全行程が見える」と感じ、もっと深く学びたくなる → LINE登録</div>
+      </div>
+      <div class="compare-vs">VS</div>
+      <div class="compare-side now">
+        <div class="label">直近 ｜ 問題提起型</div>
+        <div class="stat" style="font-size:22px; line-height:1.4;">「こんな失敗が<br>ありますよ」</div>
+        <div class="desc">落とし穴・舐めてる？・上手くいかない人は など、<strong>問題だけ</strong>を提示する言葉が増えている。<br><br>視聴者は「失敗を回避できればいい」で満足してしまい、LINE登録には進まない</div>
+      </div>
+    </div>
+
+    <div class="psy">
+      <h4>カトウタカシ（視聴者）の心理</h4>
+      <p style="margin:0; font-size:14px; color:var(--ink-mid);">
+        カトウさんは「副業をやりたいけど、何から始めればいいかわからない」状態です。彼が動くのは「<strong>具体的に何をすればいいかが、最後まで見える時</strong>」だけです。<br><br>
+        「落とし穴を教えます」だけの動画では、彼にとっては「気をつけることリスト」を手に入れただけ。「<strong>次の一歩</strong>」が見えないので、LINE登録に進む理由がない。<br><br>
+        逆に「唯一の正解ルートを解説します」と言われたら、「自分にもできる全工程を見せてもらえそう」と感じる。そして動画を見終わった後に「もっと詳しく知りたい」「個別に相談したい」という気持ちが生まれる。<strong>これがLINE登録の引き金</strong>。
+      </p>
+    </div>
+
+    <h3 class="sub">タイトルキーワードの含有率を集計するとはっきりします</h3>
+
+    <div class="bar-chart">
+      <h4>過去ヒット動画 vs 直近動画：タイトルキーワード含有率</h4>
+      <p class="chart-sub">「結論を約束する言葉」が直近ではほぼ消失している</p>
+      <div class="bar-item">
+        <span class="bar-label">「完全版」</span>
+        <div class="bar-track"><div class="bar-fill peak" style="width:30%">過去 30%</div></div>
+        <span class="bar-value">→ 0%</span>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">「正解ルート」</span>
+        <div class="bar-track"><div class="bar-fill peak" style="width:10%">過去 10%</div></div>
+        <span class="bar-value">→ 0%</span>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">「唯一」</span>
+        <div class="bar-track"><div class="bar-fill peak" style="width:10%">過去 10%</div></div>
+        <span class="bar-value">→ 0%</span>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">「本業を超える」</span>
+        <div class="bar-track"><div class="bar-fill peak" style="width:30%">過去 30%</div></div>
+        <span class="bar-value">→ 14%</span>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">「落とし穴」</span>
+        <div class="bar-track"><div class="bar-fill" style="width:29%">直近 29%</div></div>
+        <span class="bar-value">10% →（増えた）</span>
+      </div>
+    </div>
+
+    <p>
+      「完全版」「正解ルート」「唯一」のような<strong>"これさえ見れば全部わかる"言葉</strong>が、いつの間にか完全に消失しています。代わりに「落とし穴」のような<strong>"問題提起だけ"の言葉</strong>が増えました。
+    </p>
+
+    <p>
+      これがLINE転換率を3分の1にした最大の原因です。
+    </p>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 7: 同テーマ繰り返し ============ -->
+<section class="chapter">
+  <div class="wrap">
+    <div class="chapter-num">CHAPTER <strong>07</strong> ／ もう1つの原因（原因②）</div>
+    <h2>原因②：同じテーマを<br>何度も繰り返している。</h2>
+
+    <p class="lead">
+      もう1つ、データを見ていて気づいたことがあります。直近の動画は、過去にヒットした<strong>同じテーマの再放送</strong>になっていることです。
+    </p>
+
+    <p>
+      直近7本のテーマ内訳：
+    </p>
+
+    <ul style="list-style: none; padding: 0; margin: 24px 0;">
+      <li style="padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--line); margin-bottom: 8px; font-family: 'Shippori Mincho', serif; font-weight: 500;">
+        🔁 楽天ROOM（過去にヒット済み）×2本
+      </li>
+      <li style="padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--line); margin-bottom: 8px; font-family: 'Shippori Mincho', serif; font-weight: 500;">
+        🔁 Canva・塗り絵（過去にヒット済み）×2本
+      </li>
+      <li style="padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--line); margin-bottom: 8px; font-family: 'Shippori Mincho', serif; font-weight: 500;">
+        🔁 LINEスタンプ（過去にヒット済み）×1本
+      </li>
+      <li style="padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--line); margin-bottom: 8px; font-family: 'Shippori Mincho', serif; font-weight: 500;">
+        🆕 ラジオ配信（新テーマ）×1本
+      </li>
+      <li style="padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--line); margin-bottom: 8px; font-family: 'Shippori Mincho', serif; font-weight: 500;">
+        🆕 シニアnote（新テーマ）×1本
+      </li>
+    </ul>
+
+    <p>
+      <strong>5本が過去ヒット済みテーマの繰り返し</strong>です。これがなぜ問題か。1つ象徴的な動画があります。
+    </p>
+
+    <h3 class="sub">象徴的なケース：5月1日公開の楽天ROOM動画</h3>
+
+    <div class="title-example bad">
+      <div class="tex-label">直近の異常な数字 ｜ 2026.05.01</div>
+      <div class="tex-title">【副業 → 日給2万】遂に判明した！99％が知らない楽天ROOMの新アルゴリズム！</div>
+      <div class="tex-stats">
+        <span>再生：<strong>6,062</strong></span>
+        <span>視聴維持率：<strong>42%（高い！）</strong></span>
+        <span>YT登録：<strong>2</strong></span>
+        <span>LINE登録：<strong>34</strong></span>
+      </div>
+      <div class="tex-comment">
+        <strong>注目すべきは「視聴維持率42%」という数字</strong>です。これは「最後まで真剣に見ている人がたくさんいる」ことを意味します。普通なら登録もLINE登録も多く生まれるはず。<br>
+        ところが<strong>YouTube登録獲得はたった2人</strong>。これは「<strong>すでにチャンネル登録している人ばかりが見ていた</strong>」ことを強く示唆しています。
+      </div>
+    </div>
+
+    <p>
+      何が起きていたかというと：
+    </p>
+
+    <div class="premise">
+      <div class="flow-arrow" style="flex-direction: column; align-items: flex-start; gap: 8px;">
+        <span class="flow-step">過去ヒットの「楽天ROOM」動画（2025/11/24）で再生9.6万、LINE 1,367件獲得</span>
+        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" style="margin-left: 80px;"><path d="M5 0v14M1 10l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span class="flow-step">楽天ROOMに興味があった人は、ほぼ全員もうLINE登録してしまった</span>
+        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" style="margin-left: 80px;"><path d="M5 0v14M1 10l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span class="flow-step">直近の楽天ROOM新作（5/1）は、既に登録済の層にしか届かない</span>
+        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" style="margin-left: 80px;"><path d="M5 0v14M1 10l4 4 4-4" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span class="flow-step critical">維持率は高い（既ファンが見るから）が、新規登録もLINE登録もほぼ取れない</span>
+      </div>
+    </div>
+
+    <p>
+      つまり、<strong>同じテーマを掘り続けても新規視聴者は増えない</strong>ということです。これがチャンネル全体の成長を止めている、もう1つの構造的な問題です。
+    </p>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 8: ここまでの整理 ============ -->
+<section class="chapter" style="background: var(--bg-warm);">
+  <div class="wrap">
+    <div class="chapter-num">CHAPTER <strong>08</strong> ／ ここまでの整理</div>
+    <h2>ここまでで分かったことを<br>1枚にまとめます。</h2>
+
+    <div class="premise" style="background: var(--bg-card); padding: 40px;">
+      <h4 style="font-size: 14px; color: var(--accent); margin-bottom: 24px;">起きていること、その原因、それぞれの影響</h4>
+
+      <div style="margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid var(--line);">
+        <div style="font-family: 'Shippori Mincho', serif; font-weight: 700; font-size: 17px; margin-bottom: 8px; color: var(--accent);">起きていること</div>
+        <div style="font-size: 15px;">LINE登録が4ヶ月で65%減少（90.7件/日 → 33.2件/日）</div>
+      </div>
+
+      <div style="margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid var(--line);">
+        <div style="font-family: 'Shippori Mincho', serif; font-weight: 700; font-size: 17px; margin-bottom: 16px; color: var(--accent);">原因は2つ</div>
+        <div style="background: var(--bg-warm); padding: 16px; margin-bottom: 12px; border-left: 3px solid var(--accent);">
+          <div style="font-weight: 700; margin-bottom: 4px;">原因① タイトルが「結論完結型」から「問題提起型」に変わった</div>
+          <div style="font-size: 14px; color: var(--ink-mid);">→ LINE転換率が 1.35% → 0.49%（約3分の1）</div>
+        </div>
+        <div style="background: var(--bg-warm); padding: 16px; border-left: 3px solid var(--accent);">
+          <div style="font-weight: 700; margin-bottom: 4px;">原因② 楽天ROOM・Canva・LINEスタンプの繰り返しで新規視聴者枯渇</div>
+          <div style="font-size: 14px; color: var(--ink-mid);">→ 新作動画の総再生数が 187,825 → 34,372（約5分の1）</div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-family: 'Shippori Mincho', serif; font-weight: 700; font-size: 17px; margin-bottom: 8px; color: var(--good);">よかった点</div>
+        <div style="font-size: 15px;">この2つの原因はどちらも「動画の作り方」の問題なので、<strong>明日からの動画で修正できる</strong>。LINE誘導の仕組みやステップ配信の問題ではない（=システム改修は不要）。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 9: 修正策 ============ -->
+<section class="chapter">
+  <div class="wrap">
+    <div class="chapter-num">CHAPTER <strong>09</strong> ／ 具体的な修正策</div>
+    <h2>では、どうすればいいのか。<br>優先順位を付けて3つ提案します。</h2>
+
+    <p class="lead">
+      順番が大事です。1つ目から順番に実行することで、効果が積み重なります。
+    </p>
+
+    <!-- ACTION 1 -->
+    <div class="action-card">
+      <span class="action-priority">最優先 ｜ 今週中</span>
+      <h3>① 次の動画から「結論完結型タイトル」に戻す</h3>
+
+      <p>
+        「完全版」「唯一の正解ルート」「本業を超える」のいずれかを必ずタイトルに含めること。これがChapter 6で見た最大の問題への直接的な対処です。
+      </p>
+
+      <p style="font-weight: 700; font-size: 15px; margin-top: 24px; margin-bottom: 12px;">具体的な書き換え例：</p>
+
+      <div class="rewrite-block">
+        <div class="rewrite-row">
+          <div class="rewrite-before">【副業 → 月70万】AI×塗り絵のこと舐めてる？初心者が99％ハマる致命的な落とし穴</div>
+          <div class="rewrite-after">【副業 → 月70万】AI×塗り絵で本業を超える唯一の正解ルート！99％が知らない設計の全工程を初心者向け解説！</div>
+        </div>
+        <div class="rewrite-row">
+          <div class="rewrite-before">【副業 → 500万】Canvaで出来る副業の最高地点！AI×塗り絵が上手くいかない人は設計を理解すべき</div>
+          <div class="rewrite-after">【副業 → 500万】Canva×AI塗り絵 完全版！本業を超える収益化ルートを設計から販売まで全て解説！</div>
+        </div>
+        <div class="rewrite-row">
+          <div class="rewrite-before">【副業 → 月50万】無在庫物販で本業超える！たった10分のスマホ作業で目指せる収益化ルート</div>
+          <div class="rewrite-after">【副業 → 月50万】無在庫物販で本業を超える唯一の正解ルート！10分のスマホ作業で完結する全工程を解説！</div>
+        </div>
+      </div>
+
+      <div class="why">
+        <strong>なぜこれが効くか：</strong>カトウタカシ（ターゲット視聴者）が動くのは「具体的に何をすればいいかが、最後まで見える」と感じた時だけ。「正解ルート」「完全版」という言葉は、その期待を即座に作り出せる。LINE登録は「もっと深く知りたい」という気持ちが生まれた時に発生するので、タイトル段階で「全部見せてもらえそう」という期待を作ることが最重要。
+      </div>
+
+      <div class="impact">
+        <strong>期待効果：</strong>LINE転換率が 0.49% → 0.8〜1.0% に回復見込み。1本あたり平均LINE流入が 20件 → 34〜43件に。<strong>これだけで月のLINE登録が50%以上回復する可能性</strong>。
+      </div>
+    </div>
+
+    <!-- ACTION 2 -->
+    <div class="action-card">
+      <span class="action-priority p1">高優先 ｜ 2週間以内</span>
+      <h3>② 楽天ROOM・Canva・LINEスタンプ以外の新テーマを1本投入</h3>
+
+      <p>
+        Chapter 7で見たように、同じテーマを掘っても新規視聴者は来ません。「<strong>まだ深く扱っていないテーマ</strong>」を1本入れて、新規層へのリーチを確認します。
+      </p>
+
+      <p style="font-weight: 700; font-size: 15px; margin-top: 24px; margin-bottom: 12px;">候補となるテーマ（成功確率順）：</p>
+
+      <ol style="padding-left: 24px; margin: 16px 0;">
+        <li style="margin-bottom: 12px;"><strong>AIエージェント関連</strong>（ChatGPT Agents、Manus AI、Claude Computer Use など）― 2026年で最も検索ボリュームが伸びている領域</li>
+        <li style="margin-bottom: 12px;"><strong>stand.fm / Voicy系の音声配信副業</strong> ― ラジオ配信動画（4/28）で成功した路線の発展形</li>
+        <li style="margin-bottom: 12px;"><strong>2026年版Threadsアフィリエイト</strong>（最新アルゴリズム対応）― 1/2のヒット動画の続編</li>
+        <li><strong>AIアバター / VTuber副業</strong> ― 顔出しなしで参入できる強み</li>
+      </ol>
+
+      <div class="why">
+        <strong>なぜこれが効くか：</strong>既存テーマでの再生数低下は「テーマの責任」ではなく「視聴者が枯渇した」ためなので、テーマを変えるだけで未登録層にリーチできる。ラジオ配信動画（views 4,561）は実際に新テーマで再生を取れた成功例。
+      </div>
+
+      <div class="impact">
+        <strong>期待効果：</strong>新テーマの動画でviewsが既存テーマの平均（約3,000）を上回れば成功。仮にLINE転換率がいつもより低くても、未登録の新規層を獲得できる点に価値がある。
+      </div>
+    </div>
+
+    <!-- ACTION 3 -->
+    <div class="action-card">
+      <span class="action-priority p2">中優先 ｜ 1ヶ月以内</span>
+      <h3>③ 過去ヒット動画TOP10の概要欄を更新する</h3>
+
+      <p>
+        過去のヒット動画（特に楽天ROOM・LINEスタンプ・楽天ROOM2026年版の3本）は、<strong>今でも視聴され続けて、毎日LINE登録を生み続けています</strong>。これらの動画の概要欄に最新動画への内部リンクを追加することで、過去資産を新作の集客装置に変えられます。
+      </p>
+
+      <p style="font-weight: 700; font-size: 15px; margin-top: 24px; margin-bottom: 12px;">具体的な手順：</p>
+
+      <ol style="padding-left: 24px; margin: 16px 0;">
+        <li style="margin-bottom: 8px;">過去ヒット動画TOP10（yfs29、yfs36、yfs45 など）の概要欄の最上部に</li>
+        <li style="margin-bottom: 8px;">「<strong>▼ 2026年版の最新ルートはこちら</strong>」というセクションを追加</li>
+        <li style="margin-bottom: 8px;">同テーマの最新動画（アクション①で作る新作）へのリンクを設置</li>
+        <li>4週間後にWindsor.aiの「外部からの流入」増加を確認</li>
+      </ol>
+
+      <div class="why">
+        <strong>なぜこれが効くか：</strong>yfs29（2025/11/24の楽天ROOM動画）は累計で1,367件のLINE登録を生んでおり、今でも毎日伸び続けている。視聴者は過去動画を見終わった後に「2026年最新版もあります」と教えてもらえれば、自然と新作へ流れる。新規動画制作の負荷を増やさずに実行できる。
+      </div>
+
+      <div class="impact">
+        <strong>期待効果：</strong>新作動画への自然流入が10〜20%増加見込み。アクション①と組み合わせると相乗効果が期待できる。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER 10: KPI ============ -->
+<section class="chapter">
+  <div class="wrap">
+    <div class="chapter-num">CHAPTER <strong>10</strong> ／ 4週間後に再測定する</div>
+    <h2>4週間後（2026年6月8日）に<br>同じ数字を測ります。</h2>
+
+    <p class="lead">
+      改善策が効いたかどうかを定量的に判断するため、4週間後に再測定します。以下が目標値です。
+    </p>
+
+    <div style="display: grid; grid-template-columns: 1fr; gap: 16px; margin: 32px 0;">
+      <div style="background: var(--bg-card); border: 1px solid var(--line); padding: 24px; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 24px; align-items: center;">
+        <div style="font-family: 'Shippori Mincho', serif; font-weight: 700; font-size: 16px;">LINE転換率（動画平均）</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--accent); text-align:center;">現状 0.49%</div>
+        <div style="font-family: 'Shippori Mincho', serif; font-weight: 800; font-size: 22px; color: var(--good); text-align:right;">→ 0.80%+</div>
+      </div>
+      <div style="background: var(--bg-card); border: 1px solid var(--line); padding: 24px; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 24px; align-items: center;">
+        <div style="font-family: 'Shippori Mincho', serif; font-weight: 700; font-size: 16px;">1本あたりのLINE累計流入</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--accent); text-align:center;">現状 20.9件</div>
+        <div style="font-family: 'Shippori Mincho', serif; font-weight: 800; font-size: 22px; color: var(--good); text-align:right;">→ 35件+</div>
+      </div>
+      <div style="background: var(--bg-card); border: 1px solid var(--line); padding: 24px; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 24px; align-items: center;">
+        <div style="font-family: 'Shippori Mincho', serif; font-weight: 700; font-size: 16px;">視聴維持率（動画平均）</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--accent); text-align:center;">現状 25-30%</div>
+        <div style="font-family: 'Shippori Mincho', serif; font-weight: 800; font-size: 22px; color: var(--good); text-align:right;">→ 35%+</div>
+      </div>
+      <div style="background: var(--bg-card); border: 1px solid var(--line); padding: 24px; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 24px; align-items: center;">
+        <div style="font-family: 'Shippori Mincho', serif; font-weight: 700; font-size: 16px;">月間LINE日平均流入</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--accent); text-align:center;">現状 24.6件/日</div>
+        <div style="font-family: 'Shippori Mincho', serif; font-weight: 800; font-size: 22px; color: var(--good); text-align:right;">→ 40件/日+</div>
+      </div>
+    </div>
+
+    <div class="psy" style="margin-top: 40px;">
+      <h4>もう1つ、忘れてはいけない指標があります</h4>
+      <p style="margin: 0; font-size: 14px; color: var(--ink-mid);">
+        LINE登録の<strong>「数」</strong>が回復しても、登録した人が個別通話まで進むかは別の問題です。今回の改善策は「タイトルで結論を約束する」アプローチなので、もしかすると「期待だけ高くて中身が伴わない」と感じられるリスクもあります。<br><br>
+        そのため、4週間後の再測定では、<strong>LINE登録数だけでなく「個別通話の希望率」も同時に確認</strong>します。流入の質と量の両方が改善していることが、本当の成功です。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 用語集 ============ -->
+<section class="chapter">
+  <div class="wrap">
+    <div class="chapter-num">APPENDIX ／ 用語の説明</div>
+    <h2>このレポートで使った専門用語</h2>
+
+    <div class="glossary">
+      <h4>このレポートで登場する専門用語</h4>
+      <dl>
+        <dt>LINE転換率</dt>
+        <dd>YouTube動画を見た人のうち、何%がLINE公式アカウントに登録したかを示す数値。「動画から発生したLINE登録数 ÷ 動画の再生数 × 100」で計算。ヒット動画は1〜2%が出る。0.5%以下は要改善ライン。</dd>
+
+        <dt>視聴維持率</dt>
+        <dd>動画を見始めた人が、平均で動画の何%まで見続けたかを示す数値。30%以上が良好、40%超は優秀。維持率が高いとYouTubeアルゴリズムから「価値ある動画」と評価され、より多くの人に表示される。</dd>
+
+        <dt>結論完結型タイトル</dt>
+        <dd>本レポートで使った造語。「完全版」「唯一の正解ルート」のように、動画を見れば全ての答えが手に入ることを約束するタイトル形式。視聴者の「もっと知りたい」を引き出してLINE登録につながりやすい。</dd>
+
+        <dt>問題提起型タイトル</dt>
+        <dd>本レポートで使った造語。「落とし穴」「失敗する人の特徴」のように、問題だけを提示して終わるタイトル形式。クリックは取れるが、視聴後の行動（LINE登録など）には繋がりにくい。</dd>
+
+        <dt>ペルソナ（カトウタカシ）</dt>
+        <dd>このチャンネルが想定している主なターゲット視聴者像のこと。35歳・製造業・年収300万・既婚（子供3歳）・副業初心者。「根拠が明確で具体的なら動ける」タイプとして設定されている。</dd>
+
+        <dt>Windsor.ai</dt>
+        <dd>YouTube・SNSなどのデータを集約するツール。本レポートでは、YouTubeチャンネルの動画ごとの再生数・登録獲得数・視聴維持率などを取得するために使用。</dd>
+
+        <dt>Supabase</dt>
+        <dd>このチャンネル運営チームが使っているデータベース。LINE登録数・動画別の流入数・アドバイザー設定などを保存している。</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p style="margin-bottom: 16px;">レポート作成：2026.05.11 ／ 次回再測定：2026.06.08（4週間後）</p>
+    <p style="margin-bottom: 0;">分析対象：副業ハンターの神谷さん（メイン）／ KAMIYA / 副業からビジネスへ（サブ）</p>
+    <div class="src">
+      Data sources: Windsor.ai YouTube API ｜ Supabase (line_daily_registrations, tsubasa_video_inflow, tsubasa_video_metrics, tsubasa_advisor_config)
+    </div>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.bar-fill').forEach((b, i) => {
+        const w = b.style.width;
+        b.style.width = '0';
+        setTimeout(() => { b.style.width = w; }, 60 * i);
+      });
+    }
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.bar-chart').forEach(c => obs.observe(c));
+</script>
+</body>
+</html>
